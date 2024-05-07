@@ -20,7 +20,7 @@ export default function Tabs() {
   };
 
   return (
-    <Box sx={{ width: '100%', typography: 'body1' }}>
+    <Box sx={{ width: '100%', typography: 'body1', backgroundColor: 'white', borderRadius: 4 }}>
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList onChange={handleChange} aria-label="lab API tabs example">
@@ -49,7 +49,7 @@ export default function Tabs() {
               <Typography variant="h2" gutterBottom>
                 <a href="https://highcharts.com" target='_blank'>Highcharts</a>
               </Typography>
-              <Box height={300}>
+              <Box>
                 <HighchartsGraph />
               </Box>
             </Box>

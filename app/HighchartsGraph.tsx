@@ -18,15 +18,28 @@ const points = [
 ];
 
 const data: Highcharts.SeriesOptionsType[] = [
-  { name: 'advocates', type: 'line', data: points }
+  { name: 'advocates', type: 'spline',
+    marker: {
+      enabled: false
+    }
+  , data: points }
 ];
 
 const HighchartsWrapper = (props: HighchartsReact.Props) => {
   const chartComponentRef = useRef<HighchartsReact.RefObject>(null);
   const [chartOptions] = useState<Highcharts.Options>({
+    title: {
+      text: undefined
+    },
+
+    navigation: {
+      buttonOptions: {
+        enabled: false
+      }
+    },
+
     xAxis: {
       type: 'datetime',
-
     },
 
     series: data
