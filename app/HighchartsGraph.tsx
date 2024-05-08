@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import HighchartsExporting from 'highcharts/modules/exporting'
@@ -24,7 +24,7 @@ const data: Highcharts.SeriesOptionsType[] = [
 
 const HighchartsWrapper = (props: HighchartsReact.Props) => {
   const chartComponentRef = useRef<HighchartsReact.RefObject>(null);
-  const [chartOptions] = useState<Highcharts.Options>({
+  const [chartOptions, setChartOptions] = useState<Highcharts.Options>({
     title: {
       text: undefined
     },
@@ -54,6 +54,12 @@ const HighchartsWrapper = (props: HighchartsReact.Props) => {
 
     series: data
   });
+  useEffect(() => {
+    setChartOptions({
+      ...chartOptions,
+      series: data
+    })
+  }, [data])
 
   return (
     <HighchartsReact
