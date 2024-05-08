@@ -32,6 +32,10 @@ const HighchartsWrapper = (props: HighchartsReact.Props) => {
       text: undefined
     },
 
+    credits: {
+      enabled: false
+    },
+
     navigation: {
       buttonOptions: {
         enabled: false
@@ -40,6 +44,15 @@ const HighchartsWrapper = (props: HighchartsReact.Props) => {
 
     xAxis: {
       type: 'datetime',
+      title: undefined,
+    },
+
+    yAxis: {
+      title: undefined,
+    },
+
+    legend: {
+      enabled: false
     },
 
     series: data

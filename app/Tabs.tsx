@@ -11,6 +11,9 @@ import { useState } from 'react';
 import NivoGraph from './NivoGraph';
 import RechartsGraph from './RechartsGraph';
 import HighchartsGraph from './HighchartsGraph';
+import ChartjsGraph from './ChartjsGraph';
+import { Card, CardContent } from '@mui/material';
+import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2
 
 export default function Tabs() {
   const [value, setValue] = useState('1');
@@ -30,31 +33,48 @@ export default function Tabs() {
           </TabList>
         </Box>
         <TabPanel value="1">
-          <Stack>
+        <Grid container spacing={2}>
+          <Grid xs={12} md={6} lg={4}>
             <Box>
               <Typography variant="h2" gutterBottom>
                 <a href="https://nivo.rocks" target='_blank'>Nivo</a>
               </Typography>
               <NivoGraph />
             </Box>
+          </Grid>
 
+          <Grid xs={12} md={6} lg={4}>
+              <Box>
+                <Typography variant="h2" gutterBottom>
+                  <a href="https://recharts.org" target='_blank'>Recharts</a>
+                </Typography>
+                <RechartsGraph />
+              </Box>
+          </Grid>
+
+          <Grid xs={12} md={6} lg={4}>
+              <Box>
+                <Typography variant="h2" gutterBottom>
+                  <a href="https://highcharts.com" target='_blank'>Highcharts</a>
+                </Typography>
+                <Box>
+                  <HighchartsGraph />
+                </Box>
+              </Box>
+          </Grid>
+
+          <Grid xs={12} md={6} lg={4}>
             <Box>
               <Typography variant="h2" gutterBottom>
-                <a href="https://recharts.org" target='_blank'>Recharts</a>
-              </Typography>
-              <RechartsGraph />
-            </Box>
-
-            <Box>
-              <Typography variant="h2" gutterBottom>
-                <a href="https://highcharts.com" target='_blank'>Highcharts</a>
+                <a href="https://chartjs.org" target='_blank'>Chart.js</a>
               </Typography>
               <Box>
-                <HighchartsGraph />
+                <ChartjsGraph />
               </Box>
             </Box>
+          </Grid>
 
-          </Stack>
+          </Grid>
         </TabPanel>
         <TabPanel value="2">Item Two</TabPanel>
         <TabPanel value="3">Item Three</TabPanel>

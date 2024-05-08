@@ -23,17 +23,12 @@ export default function RechartsGraph() {
   <LineChart
     data={data}
     margin={{
-      top: 5,
-      right: 30,
-      left: 20,
-      bottom: 5,
     }}
   >
     <CartesianGrid vertical={false} />
     <XAxis tickFormatter={dateFormatter} dataKey="day" />
-    <YAxis axisLine={false} tickMargin={8} tick={{ fontSize: 14 }}/>
+    <YAxis tickLine={false} axisLine={false} tickMargin={8} tick={{ fontSize: 14 }}/>
     <Tooltip />
-    <Legend />
     <Line type="monotone" dataKey="y" dot={false} strokeWidth={3} />
   </LineChart>
 </ResponsiveContainer></Box>
