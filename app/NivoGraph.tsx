@@ -34,7 +34,6 @@ export default function NivoGraph() {
     axisBottom={{
       format: '%b %d',
       legendOffset: -12,
-      tickValues: 'every day'
     }}
     axisLeft={{
       tickSize: 0,
