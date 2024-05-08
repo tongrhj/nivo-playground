@@ -35,6 +35,13 @@ export default function ChartjsGraph() {
       ]
     }}
     options={{
+      elements: {
+        point: {
+          radius: 1,
+          hitRadius: 12,
+          hoverRadius: 4,
+        }
+      },
       plugins: {
         legend: {
           display: false,

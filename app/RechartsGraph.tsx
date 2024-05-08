@@ -1,7 +1,7 @@
 'use client'
 
 import Box from '@mui/material/Box';
-import { XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, LineChart, Line, CartesianGrid } from 'recharts';
+import { XAxis, YAxis, Tooltip, ResponsiveContainer, LineChart, Line, CartesianGrid } from 'recharts';
 
 const data = [
   { day: '2023-01-01', y: 4 },
