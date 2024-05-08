@@ -53,14 +53,12 @@ export default function Tabs() {
           </Grid>
 
           <Grid xs={12} md={6} lg={4}>
-              <Box>
-                <Typography variant="h2" gutterBottom>
-                  <a href="https://highcharts.com" target='_blank'>Highcharts</a>
-                </Typography>
-                <Box>
-                  <HighchartsGraph />
-                </Box>
-              </Box>
+            <Box>
+              <Typography variant="h2" gutterBottom>
+                <a href="https://highcharts.com" target='_blank'>Highcharts</a>
+              </Typography>
+              <HighchartsGraph />
+            </Box>
           </Grid>
 
           <Grid xs={12} md={6} lg={4}>
@@ -68,9 +66,7 @@ export default function Tabs() {
               <Typography variant="h2" gutterBottom>
                 <a href="https://chartjs.org" target='_blank'>Chart.js</a>
               </Typography>
-              <Box>
-                <ChartjsGraph />
-              </Box>
+              <ChartjsGraph />
             </Box>
           </Grid>
 

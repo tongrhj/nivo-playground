@@ -1,18 +1,11 @@
 import Box from "@mui/material/Box";
 import { ResponsiveLine } from "@nivo/line";
+import { fillMissingDays, mockData } from "./utils";
 
 const data = [
   {
     id: 'Advocates',
-    data: [
-      { x: '2024-01-01', y: 4 },
-      { x: '2024-01-02', y: 8 },
-      { x: '2024-01-03', y: 0 },
-      { x: '2024-01-04', y: 15 },
-      { x: '2024-01-05', y: 16 },
-      { x: '2024-01-06', y: 23 },
-      { x: '2024-01-07', y: 42 },
-    ]
+    data: fillMissingDays(mockData)
   },
 ];
 
